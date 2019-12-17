@@ -81,6 +81,7 @@ class MusicLibraryController
     @list = Song.all.select{ |song|
       song.genre.name == genre
     }.sort_by{|e| e.name}
+
     @list.each_with_index{ |s, i|
       puts "#{i + 1}. #{s.artist.name} - #{s.name}"
     }
